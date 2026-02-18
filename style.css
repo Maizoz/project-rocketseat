@@ -112,7 +112,11 @@ ul li a:hover {
   background-color: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
-
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 24px 0;
+}
 #social-links {
   display: flex;
   justify-content: center;
