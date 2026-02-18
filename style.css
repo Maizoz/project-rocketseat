@@ -42,7 +42,11 @@ body * {
   padding: 24px;
 }
 #profile img {
+  border-radius: 50%;
   width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 #profile p {
@@ -67,10 +71,10 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out 0.5s;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.5s forwards;
 }
 
 #switch span {
@@ -133,5 +137,23 @@ ul li a:hover {
   }
   .light {
     --bg-url: url(assets/bg-desktop.png/background-light.png);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
